@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lampiran Modul 4 - Variasi justify-content</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .demo {
+      margin-bottom: 22px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid var(--sand);
+      border-radius: var(--radius);
+    }
+    .demo h3 { margin: 0 0 4px; }
+    .demo code {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: #f1e7dc;
+      color: var(--brown);
+      font-size: 0.85rem;
+    }
+    .demo .daftar-menu { justify-content: flex-start; gap: 12px; }
+    .demo .kotak {
+      width: 120px;
+      padding: 22px 10px;
+      text-align: center;
+      background: var(--gold-light);
+      border: 1px solid var(--sand);
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .demo.center .daftar-menu { justify-content: center; }
+    .demo.between .daftar-menu { justify-content: space-between; }
+    .demo.between .kotak { width: 30%; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="../index.html">
+        <img src="../img/logo.jpeg" alt="Logo Kopi Nusantara">
+        <span><h1>Kopi Nusantara</h1><small>Lampiran Modul 4</small></span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">Beranda</a>
+        <a href="../menu-manual.html">Menu CSS</a>
+        <a href="../admin/dashboard.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <h2>Variasi <code>justify-content</code> pada Flexbox</h2>
+      <p style="color:#7b6656;">
+        Perhatikan perbedaan posisi tiga kotak pada setiap baris. Container memakai
+        <code>display: flex</code>, sedangkan <code>justify-content</code> mengatur
+        distribusi ruang pada main axis (horizontal).
+      </p>
+
+      <section class="demo">
+        <h3>1. flex-start</h3>
+        <code>justify-content: flex-start;</code>
+        <div class="daftar-menu">
+          <div class="kotak">Kotak 1</div>
+          <div class="kotak">Kotak 2</div>
+          <div class="kotak">Kotak 3</div>
+        </div>
+      </section>
+
+      <section class="demo center">
+        <h3>2. center</h3>
+        <code>justify-content: center;</code>
+        <div class="daftar-menu">
+          <div class="kotak">Kotak 1</div>
+          <div class="kotak">Kotak 2</div>
+          <div class="kotak">Kotak 3</div>
+        </div>
+      </section>
+
+      <section class="demo between">
+        <h3>3. space-between</h3>
+        <code>justify-content: space-between;</code>
+        <div class="daftar-menu">
+          <div class="kotak">Kotak 1</div>
+          <div class="kotak">Kotak 2</div>
+          <div class="kotak">Kotak 3</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Kopi Nusantara &middot; Lampiran Praktikum Modul 4</p>
+  </footer>
+</body>
+</html>

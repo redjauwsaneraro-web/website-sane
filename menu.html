@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu Kopi Nusantara: kopi Wamena, kopi susu, dan teh tarik.">
+  <title>Menu - Kopi Nusantara</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-kopi.css">
+</head>
+<body>
+  <!-- Modul 10: navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-kopi sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.jpeg" alt="Logo Kopi Nusantara" width="44" height="44">
+        Kopi Nusantara
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navUtama" aria-controls="navUtama"
+              aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navUtama">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="pesan.html">Pesan</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin/dashboard.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <!-- Hero Bootstrap -->
+    <section class="hero-bs p-4 p-md-5 mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge text-bg-warning mb-3">Menu Lengkap</span>
+          <h1 class="display-5">Pilih Kopimu,<br>Kami Seduh Segar.</h1>
+          <p class="lead mb-4">
+            Semua menu dibuat dari biji kopi lokal Papua. Pesan 5 gelas atau lebih
+            dan dapatkan diskon 10%.
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="pesan.html" class="btn btn-kopi btn-lg">Pesan Sekarang</a>
+            <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#modalCaraPesan">Cara Pesan</button>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center d-none d-lg-block">
+          <img src="img/kopi-susu.jpg" alt="Kopi Susu Kopi Nusantara"
+               class="rounded-4 shadow" width="280">
+        </div>
+      </div>
+    </section>
+
+    <!-- Modul 10: card di dalam grid col-12 col-md-6 col-lg-4 -->
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+        <div>
+          <h2 class="mb-1">Menu Kami</h2>
+          <p class="text-secondary mb-0">Tiga menu andalan yang selalu tersedia.</p>
+        </div>
+        <span class="badge rounded-pill text-bg-dark">3 menu</span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card card-kopi h-100">
+            <img src="img/kopi-wamena.jpg" class="card-img-top" alt="Kopi Wamena">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start gap-2">
+                <h3 class="card-title h5 mb-1">Kopi Wamena</h3>
+                <span class="badge text-bg-warning">Best Seller</span>
+              </div>
+              <p class="card-text text-secondary">
+                Arabika dataran tinggi Wamena, aroma kuat dengan rasa sedikit fruity.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="harga-bs">Rp18.000</span>
+                <a href="pesan.html" class="btn btn-kopi btn-sm">Pesan</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card card-kopi h-100">
+            <img src="img/kopi-susu.jpg" class="card-img-top" alt="Kopi Susu">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start gap-2">
+                <h3 class="card-title h5 mb-1">Kopi Susu</h3>
+                <span class="badge text-bg-success">Favorit</span>
+              </div>
+              <p class="card-text text-secondary">
+                Espresso, susu segar, dan gula aren. Manis dan creamy.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="harga-bs">Rp20.000</span>
+                <a href="pesan.html" class="btn btn-kopi btn-sm">Pesan</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card card-kopi h-100">
+            <img src="img/teh-tarik.jpg" class="card-img-top" alt="Teh Tarik">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start gap-2">
+                <h3 class="card-title h5 mb-1">Teh Tarik</h3>
+                <span class="badge text-bg-secondary">Non Kopi</span>
+              </div>
+              <p class="card-text text-secondary">
+                Teh hitam pekat dengan susu creamy, cocok untuk yang tidak minum kopi.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="harga-bs">Rp15.000</span>
+                <a href="pesan.html" class="btn btn-kopi btn-sm">Pesan</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabel harga -->
+    <section class="mb-5">
+      <h2 class="h4 mb-3">Daftar Harga</h2>
+      <div class="table-responsive rounded-3 shadow-sm">
+        <table class="table table-kopi table-striped align-middle mb-0">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Menu</th>
+              <th scope="col">Kategori</th>
+              <th scope="col">Harga</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kopi Wamena</td>
+              <td>Kopi</td>
+              <td>Rp18.000</td>
+              <td><span class="badge text-bg-success">Tersedia</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Kopi Susu</td>
+              <td>Kopi</td>
+              <td>Rp20.000</td>
+              <td><span class="badge text-bg-success">Tersedia</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Teh Tarik</td>
+              <td>Non Kopi</td>
+              <td>Rp15.000</td>
+              <td><span class="badge text-bg-success">Tersedia</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-secondary small mt-2 mb-0">
+        Diskon 10% otomatis untuk pembelian minimal 5 gelas.
+      </p>
+    </section>
+  </main>
+
+  <!-- Modal Bootstrap: cara pesan -->
+  <div class="modal fade modal-kopi" id="modalCaraPesan" tabindex="-1"
+       aria-labelledby="judulCaraPesan" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="judulCaraPesan">Cara Pesan</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <ol class="mb-0">
+            <li>Buka halaman <strong>Pesan</strong>.</li>
+            <li>Isi nama, nomor HP, menu, dan jumlah gelas.</li>
+            <li>Periksa total harga yang muncul otomatis.</li>
+            <li>Klik tombol <strong>Pesan</strong>, lalu ambil pesanan di kedai.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <a href="pesan.html" class="btn btn-kopi">Mulai Pesan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-kopi">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2026 Kopi Nusantara &middot; Jl. Raya Sentani, Jayapura</p>
+      <p class="mb-0 small">
+        <a href="menu-manual.html" class="link-light">Versi CSS manual</a> &middot;
+        Halaman ini memakai Bootstrap 5.3 (offline).
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

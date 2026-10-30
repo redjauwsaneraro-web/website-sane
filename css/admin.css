@@ -1,0 +1,253 @@
+/* ============================================================
+   Kopi Nusantara - CSS admin
+   Modul 5 (CSS Grid & layout dashboard) + Modul 9 (responsive)
+   ============================================================ */
+
+.admin-body { background: #efe6dc; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 232px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height: 100vh;
+}
+
+.layout > header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  background: var(--brown-dark);
+  color: var(--white);
+}
+
+.layout > header .admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.layout > header .admin-brand img { width: 38px; height: 38px; }
+
+.layout > header a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+.layout > header a:hover { text-decoration: underline; }
+
+.layout > aside {
+  grid-area: sidebar;
+  background: var(--brown);
+  padding: 20px 16px;
+  color: var(--white);
+}
+
+.layout > aside .sidebar-title {
+  font-size: 0.72rem;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin: 0 0 12px 8px;
+}
+
+.layout > aside a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f4e9df;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 9px;
+  margin-bottom: 5px;
+  font-size: 0.94rem;
+  transition: background 0.18s ease;
+}
+
+.layout > aside a:hover { background: rgba(255, 255, 255, 0.12); }
+
+.layout > aside a.active {
+  background: var(--gold);
+  color: var(--brown-dark);
+  font-weight: 700;
+}
+
+.layout > main {
+  grid-area: main;
+  padding: 26px;
+  min-width: 0;
+}
+
+.layout > footer {
+  grid-area: footer;
+  background: var(--brown-dark);
+  color: #d9c9bb;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85rem;
+}
+
+/* ---------- Kepala halaman ---------- */
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.page-head h2 { margin: 0; font-size: 1.5rem; }
+
+.page-head p { margin: 4px 0 0; color: #7b6656; font-size: 0.9rem; }
+
+/* ---------- Kartu ringkasan (Grid) ---------- */
+.ringkasan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ringkasan .kartu {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+  flex: initial;
+  background: var(--white);
+}
+
+.ringkasan .kartu h6 {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8a7464;
+  font-weight: 600;
+}
+
+.ringkasan .kartu .angka {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--brown);
+  line-height: 1.2;
+}
+
+.ringkasan .kartu .ket { font-size: 0.82rem; color: #8a7464; }
+
+.ringkasan .kartu.aksen { background: var(--brown); }
+.ringkasan .kartu.aksen h6,
+.ringkasan .kartu.aksen .ket { color: #ead9c9; }
+.ringkasan .kartu.aksen .angka { color: var(--gold-light); }
+
+/* ---------- Panel / tabel ---------- */
+.panel {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 22px rgba(62, 44, 35, 0.08);
+  padding: 20px;
+  margin-bottom: 22px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.panel-head h3 { margin: 0; font-size: 1.1rem; }
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.toolbar input[type="text"],
+.toolbar input[type="search"] {
+  flex: 1 1 240px;
+  max-width: 340px;
+  padding: 9px 13px;
+  border: 1px solid var(--sand);
+  border-radius: 9px;
+  font: inherit;
+  background: #fffdfa;
+}
+
+.toolbar input:focus {
+  outline: 2px solid rgba(201, 139, 75, 0.4);
+  border-color: var(--gold);
+}
+
+.layout .table-wrap { box-shadow: none; border: 1px solid #eee3d9; }
+
+.layout table { min-width: 720px; }
+
+.layout th, .layout td { padding: 10px 12px; font-size: 0.9rem; }
+
+.layout tbody tr:last-child td { border-bottom: 0; }
+
+/* ---------- Form admin ---------- */
+.layout .form-card {
+  max-width: 720px;
+  box-shadow: none;
+  border: 1px solid #eee3d9;
+  padding: 22px;
+}
+
+.form-hint { font-size: 0.8rem; color: #8a7464; margin-top: 4px; }
+
+/* ---------- Modul 9: responsive ---------- */
+@media (max-width: 900px) {
+  .ringkasan { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .layout > aside {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 12px;
+  }
+
+  .layout > aside .sidebar-title { display: none; }
+
+  .layout > aside a { white-space: nowrap; margin: 0; }
+
+  .layout > main { padding: 18px 14px; }
+
+  .ringkasan { grid-template-columns: 1fr; }
+
+  .layout table { display: block; overflow-x: auto; white-space: nowrap; }
+
+  .layout > header { padding: 12px 16px; }
+}
+
+@media (max-width: 480px) {
+  .page-head { flex-direction: column; align-items: flex-start; }
+}

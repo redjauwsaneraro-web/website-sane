@@ -1,0 +1,112 @@
+/* ============================================================
+   Kopi Nusantara - penyesuaian warna di atas Bootstrap 5.3
+   Dipakai oleh menu.html dan admin/dashboard-bs.html (Modul 10)
+   ============================================================ */
+
+:root {
+  --kopi-brown: #6f4e37;
+  --kopi-dark: #3e2c23;
+  --kopi-gold: #c98b4b;
+  --kopi-cream: #f8f3ee;
+  --kopi-gold-light: #ffe8c2;
+}
+
+body {
+  background: var(--kopi-cream);
+  color: var(--kopi-dark);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.navbar-kopi {
+  background: linear-gradient(120deg, var(--kopi-dark), var(--kopi-brown));
+}
+
+.navbar-kopi .navbar-brand { font-weight: 700; letter-spacing: 0.5px; }
+
+.navbar-kopi .nav-link { color: #f4e9df; }
+.navbar-kopi .nav-link:hover,
+.navbar-kopi .nav-link.active { color: var(--kopi-gold-light); }
+
+.hero-bs {
+  background: linear-gradient(130deg, var(--kopi-dark), #8a6248);
+  color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.hero-bs .display-5 { font-weight: 700; }
+
+.card-kopi {
+  border: 1px solid #e0d2c4;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.card-kopi:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(62, 44, 35, 0.16);
+}
+
+.card-kopi img {
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-kopi .card-title { color: var(--kopi-dark); }
+
+.harga-bs {
+  color: var(--kopi-brown);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.table-kopi thead th {
+  background: var(--kopi-brown);
+  color: #fff;
+  border-color: var(--kopi-brown);
+}
+
+.btn-kopi {
+  background: var(--kopi-gold);
+  border-color: var(--kopi-gold);
+  color: var(--kopi-dark);
+  font-weight: 600;
+}
+
+.btn-kopi:hover {
+  background: var(--kopi-gold-light);
+  border-color: var(--kopi-gold-light);
+  color: var(--kopi-dark);
+}
+
+.footer-kopi {
+  background: var(--kopi-dark);
+  color: #e9dccf;
+  padding: 22px 0;
+  margin-top: 48px;
+}
+
+.modal-kopi .modal-header { background: var(--kopi-brown); color: #fff; }
+
+.modal-kopi .btn-close { filter: invert(1); }
+
+/* Dashboard Bootstrap */
+.dashboard-bs .stat-card { border: 0; color: #fff; height: 100%; }
+
+.dashboard-bs .stat-card .stat-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.dashboard-bs .stat-card .stat-value { font-size: 1.6rem; font-weight: 700; }
+
+.dashboard-bs .table thead th { background: var(--kopi-brown); color: #fff; }
+
+@media (max-width: 768px) {
+  .card-kopi img { height: 210px; }
+  .hero-bs { border-radius: 0.5rem; }
+}

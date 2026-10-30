@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Halaman menu Kopi Nusantara versi CSS manual (Flexbox).">
+  <title>Menu (CSS Manual) - Kopi Nusantara</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <img src="img/logo.jpeg" alt="Logo Kopi Nusantara">
+        <span>
+          <h1>Kopi Nusantara</h1>
+          <small>Papua &middot; Sejak 2020</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="menu.html">Menu</a>
+        <a href="menu-manual.html" class="active" aria-current="page">Menu (CSS Manual)</a>
+        <a href="pesan.html">Pesan</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="admin/dashboard.html" class="btn-admin">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Menu Kami</h2>
+            <p>Versi CSS manual dengan Flexbox (Modul 3 dan Modul 4).</p>
+            <div class="title-line"></div>
+          </div>
+          <a class="btn btn-dark btn-sm" href="menu.html">Versi Bootstrap</a>
+        </div>
+
+        <div class="daftar-menu">
+          <article class="kartu">
+            <img src="img/kopi-wamena.jpg" alt="Kopi Wamena">
+            <div class="kartu-body">
+              <h3>Kopi Wamena</h3>
+              <p>Arabika dataran tinggi, aroma kuat dan sedikit fruity.</p>
+              <span class="harga">Rp18.000</span>
+            </div>
+          </article>
+          <article class="kartu">
+            <img src="img/kopi-susu.jpg" alt="Kopi Susu">
+            <div class="kartu-body">
+              <h3>Kopi Susu</h3>
+              <p>Espresso, susu segar, dan gula aren. Manisnya pas.</p>
+              <span class="harga">Rp20.000</span>
+            </div>
+          </article>
+          <article class="kartu">
+            <img src="img/teh-tarik.jpg" alt="Teh Tarik">
+            <div class="kartu-body">
+              <h3>Teh Tarik</h3>
+              <p>Teh hitam pekat dengan susu creamy, hangat dan lembut.</p>
+              <span class="harga">Rp15.000</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Daftar Harga</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Menu</th>
+                <th>Kategori</th>
+                <th>Harga</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Kopi Wamena</td>
+                <td>Kopi</td>
+                <td>Rp18.000</td>
+                <td><span class="status selesai">Tersedia</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Kopi Susu</td>
+                <td>Kopi</td>
+                <td>Rp20.000</td>
+                <td><span class="status selesai">Tersedia</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Teh Tarik</td>
+                <td>Non Kopi</td>
+                <td>Rp15.000</td>
+                <td><span class="status selesai">Tersedia</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-center" style="color:#7b6656; margin-top:12px;">
+          Diskon 10% otomatis untuk pembelian minimal 5 gelas.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Kopi Nusantara &middot; Jl. Raya Sentani, Jayapura</p>
+      <p><a href="menu.html">Kembali ke versi Bootstrap</a></p>
+    </div>
+  </footer>
+</body>
+</html>

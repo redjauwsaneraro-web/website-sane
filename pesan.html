@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Form pemesanan Kopi Nusantara.">
+  <title>Pesan - Kopi Nusantara</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <img src="img/logo.jpeg" alt="Logo Kopi Nusantara">
+        <span>
+          <h1>Kopi Nusantara</h1>
+          <small>Papua &middot; Sejak 2020</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="menu.html">Menu</a>
+        <a href="pesan.html" class="active" aria-current="page">Pesan</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="admin/dashboard.html" class="btn-admin">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Form Pemesanan</h2>
+            <p>Isi data di bawah, total harga akan dihitung otomatis.</p>
+            <div class="title-line"></div>
+          </div>
+        </div>
+
+        <div class="kontak-grid" style="align-items: flex-start;">
+          <div class="form-card" style="flex: 1 1 480px;">
+            <form id="formPesan" action="#" method="post" novalidate>
+              <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Contoh: Yohanes Kogoya">
+                <small class="error" id="errNama"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="hp">No. HP / WhatsApp</label>
+                <input type="tel" id="hp" name="hp" placeholder="Contoh: 081234567890">
+                <small class="error" id="errHp"></small>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="menu">Menu</label>
+                  <select id="menu" name="menu">
+                    <option value="18000">Kopi Wamena - Rp18.000</option>
+                    <option value="20000">Kopi Susu - Rp20.000</option>
+                    <option value="15000">Teh Tarik - Rp15.000</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="jumlah">Jumlah (gelas)</label>
+                  <input type="number" id="jumlah" name="jumlah" min="1" value="1">
+                  <small class="error" id="errJumlah"></small>
+                </div>
+              </div>
+
+              <p class="harga-total">Total: <b id="total">Rp18.000</b></p>
+
+              <div class="form-group">
+                <label>Penyajian</label>
+                <div class="radio-row">
+                  <label><input type="radio" name="saji" value="panas" checked> Panas</label>
+                  <label><input type="radio" name="saji" value="dingin"> Dingin</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="catatan">Catatan (opsional)</label>
+                <textarea id="catatan" name="catatan" placeholder="Contoh: gula aren sedikit, tanpa es."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
+            </form>
+
+            <p id="pesanSukses" style="min-height: 20px; margin: 10px 0 0; color: var(--green); font-weight: 700;"></p>
+          </div>
+
+          <aside class="kartu" style="flex: 1 1 260px; padding: 24px; max-width: 340px;">
+            <h3>Info Pesanan</h3>
+            <ul class="info-list">
+              <li><span>Diskon</span><strong>10% (min. 5 gelas)</strong></li>
+              <li><span>Waktu siap</span><strong>10&ndash;15 menit</strong></li>
+              <li><span>Pembayaran</span><strong>Tunai / QRIS</strong></li>
+              <li><span>Ambil di</span><strong>Kedai Sentani</strong></li>
+            </ul>
+            <p style="font-size: 0.85rem; color: #7b6656; margin-bottom: 0;">
+              Form ini hanya demonstrasi praktikum; data tidak dikirim ke server.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Kopi Nusantara &middot; Jl. Raya Sentani, Jayapura</p>
+      <p>
+        <a href="index.html">Beranda</a> &middot;
+        <a href="menu.html">Menu</a> &middot;
+        <a href="pesan.html">Pesan</a> &middot;
+        <a href="kontak.html">Kontak</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

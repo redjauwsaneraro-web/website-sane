@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Menu - Kopi Nusantara</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+  <div class="layout">
+    <header>
+      <div class="admin-brand">
+        <img src="../img/logo.jpeg" alt="Logo Kopi Nusantara">
+        Admin Kopi Nusantara
+      </div>
+      <a href="../index.html">&larr; Lihat situs</a>
+    </header>
+
+    <aside>
+      <p class="sidebar-title">Menu Admin</p>
+      <a href="dashboard.html">&#128202; Dashboard</a>
+      <a href="pesanan.html">&#128203; Pesanan</a>
+      <a href="tambah-menu.html" class="active" aria-current="page">&#10133; Tambah Menu</a>
+      <a href="dashboard-bs.html">&#9889; Dashboard Bootstrap</a>
+    </aside>
+
+    <main>
+      <div class="page-head">
+        <div>
+          <h2>Tambah Menu</h2>
+          <p>Lengkapi data menu baru, lalu klik Simpan.</p>
+        </div>
+        <a href="pesanan.html" class="btn btn-dark btn-sm">Lihat Pesanan</a>
+      </div>
+
+      <section class="panel">
+        <form id="formTambahMenu" action="#" method="post" novalidate class="form-card">
+          <div class="form-group">
+            <label for="namaMenu">Nama Menu <span style="color: var(--red);">*</span></label>
+            <input type="text" id="namaMenu" name="namaMenu" placeholder="Contoh: Es Kopi Pandan">
+            <small class="error" id="errNamaMenu"></small>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="kategori">Kategori <span style="color: var(--red);">*</span></label>
+              <select id="kategori" name="kategori">
+                <option value="">-- Pilih kategori --</option>
+                <option value="Kopi">Kopi</option>
+                <option value="Non Kopi">Non Kopi</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Snack">Snack</option>
+              </select>
+              <small class="error" id="errKategori"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="hargaMenu">Harga (Rp) <span style="color: var(--red);">*</span></label>
+              <input type="number" id="hargaMenu" name="hargaMenu" min="5000" step="1000" placeholder="15000">
+              <small class="error" id="errHargaMenu"></small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="deskripsiMenu">Deskripsi</label>
+            <textarea id="deskripsiMenu" name="deskripsiMenu" placeholder="Deskripsi singkat menu baru..."></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="reset" class="btn btn-dark">Reset</button>
+          </div>
+
+          <p id="pesanMenuSukses"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h3>Daftar Menu Saat Ini</h3>
+          <span class="status" id="jumlahMenu">3 menu</span>
+        </div>
+        <div class="table-wrap">
+          <table id="tabelMenu">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Menu</th>
+                <th>Kategori</th>
+                <th>Harga</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Kopi Wamena</td><td>Kopi</td><td>Rp18.000</td></tr>
+              <tr><td>2</td><td>Kopi Susu</td><td>Kopi</td><td>Rp20.000</td></tr>
+              <tr><td>3</td><td>Teh Tarik</td><td>Non Kopi</td><td>Rp15.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>&copy; 2026 Kopi Nusantara &middot; Panel Admin</footer>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

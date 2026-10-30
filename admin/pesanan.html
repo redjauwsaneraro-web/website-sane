@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Pesanan - Kopi Nusantara</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+  <div class="layout">
+    <header>
+      <div class="admin-brand">
+        <img src="../img/logo.jpeg" alt="Logo Kopi Nusantara">
+        Admin Kopi Nusantara
+      </div>
+      <a href="../index.html">&larr; Lihat situs</a>
+    </header>
+
+    <aside>
+      <p class="sidebar-title">Menu Admin</p>
+      <a href="dashboard.html">&#128202; Dashboard</a>
+      <a href="pesanan.html" class="active" aria-current="page">&#128203; Pesanan</a>
+      <a href="tambah-menu.html">&#10133; Tambah Menu</a>
+      <a href="dashboard-bs.html">&#9889; Dashboard Bootstrap</a>
+    </aside>
+
+    <main>
+      <div class="page-head">
+        <div>
+          <h2>Data Pesanan</h2>
+          <p>Cari nama pelanggan dan tandai pesanan yang sudah selesai.</p>
+        </div>
+        <a href="tambah-menu.html" class="btn btn-primary btn-sm">+ Tambah Menu</a>
+      </div>
+
+      <section class="panel">
+        <div class="toolbar">
+          <input type="text" id="cari" placeholder="Cari nama pelanggan..." aria-label="Cari nama pelanggan">
+          <span id="infoCari" style="font-size: 0.85rem; color: #7b6656;">5 pesanan ditampilkan</span>
+        </div>
+
+        <div class="table-wrap">
+          <table id="tabelPesanan">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Menu</th>
+                <th>Jumlah</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Maria</td>
+                <td>Kopi Susu</td>
+                <td>2</td>
+                <td data-total="40000">Rp40.000</td>
+                <td><span class="status">Diproses</span></td>
+                <td><button type="button" class="btn btn-dark btn-sm btn-selesai">Selesai</button></td>
+              </tr>
+              <tr class="selesai">
+                <td>2</td>
+                <td>Yohanes</td>
+                <td>Kopi Wamena</td>
+                <td>1</td>
+                <td data-total="18000">Rp18.000</td>
+                <td><span class="status">Selesai</span></td>
+                <td><button type="button" class="btn btn-dark btn-sm btn-selesai" disabled>Selesai &#10003;</button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Agus</td>
+                <td>Teh Tarik</td>
+                <td>3</td>
+                <td data-total="45000">Rp45.000</td>
+                <td><span class="status">Diproses</span></td>
+                <td><button type="button" class="btn btn-dark btn-sm btn-selesai">Selesai</button></td>
+              </tr>
+              <tr class="selesai">
+                <td>4</td>
+                <td>Ruth</td>
+                <td>Kopi Susu</td>
+                <td>1</td>
+                <td data-total="20000">Rp20.000</td>
+                <td><span class="status">Selesai</span></td>
+                <td><button type="button" class="btn btn-dark btn-sm btn-selesai" disabled>Selesai &#10003;</button></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Daniel</td>
+                <td>Kopi Wamena</td>
+                <td>5</td>
+                <td data-total="81000">Rp81.000</td>
+                <td><span class="status">Diproses</span></td>
+                <td><button type="button" class="btn btn-dark btn-sm btn-selesai">Selesai</button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Total Pendapatan</td>
+                <td colspan="3" id="totalPendapatan">Rp204.000</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>&copy; 2026 Kopi Nusantara &middot; Panel Admin</footer>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

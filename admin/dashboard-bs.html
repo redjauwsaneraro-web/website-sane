@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin (Bootstrap) - Kopi Nusantara</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-kopi.css">
+</head>
+<body class="dashboard-bs">
+  <!-- Navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-kopi">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="dashboard-bs.html">
+        <img src="../img/logo.jpeg" alt="Logo Kopi Nusantara" width="38" height="38">
+        Admin Kopi Nusantara
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navAdmin" aria-controls="navAdmin"
+              aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navAdmin">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="dashboard-bs.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="pesanan.html">Pesanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="tambah-menu.html">Tambah Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Lihat Situs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <!-- Alert Bootstrap -->
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Selamat datang!</strong> Dashboard admin berhasil dimuat dengan Bootstrap 5.3 (offline).
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tutup"></button>
+    </div>
+
+    <!-- Kartu ringkasan -->
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-4">
+        <div class="card stat-card text-bg-primary">
+          <div class="card-body">
+            <div class="stat-label">Total Pesanan</div>
+            <div class="stat-value">120</div>
+            <small>+12 minggu ini</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card stat-card text-bg-success">
+          <div class="card-body">
+            <div class="stat-label">Pendapatan</div>
+            <div class="stat-value">Rp2.400.000</div>
+            <small>Bulan ini</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card stat-card text-bg-warning">
+          <div class="card-body">
+            <div class="stat-label">Menu Terlaris</div>
+            <div class="stat-value">Kopi Susu</div>
+            <small>58 gelas terjual</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabel + badge -->
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+          <h2 class="h5 mb-0">Pesanan Terbaru</h2>
+          <button class="btn btn-kopi btn-sm" data-bs-toggle="modal" data-bs-target="#modalMenu">
+            + Tambah Menu
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Menu</th>
+                <th>Jumlah</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maria</td><td>Kopi Susu</td><td>2</td><td>Rp40.000</td>
+                <td><span class="badge text-bg-warning">Diproses</span></td>
+              </tr>
+              <tr>
+                <td>Yohanes</td><td>Kopi Wamena</td><td>1</td><td>Rp18.000</td>
+                <td><span class="badge text-bg-success">Selesai</span></td>
+              </tr>
+              <tr>
+                <td>Agus</td><td>Teh Tarik</td><td>3</td><td>Rp45.000</td>
+                <td><span class="badge text-bg-warning">Diproses</span></td>
+              </tr>
+              <tr>
+                <td>Ruth</td><td>Kopi Susu</td><td>1</td><td>Rp20.000</td>
+                <td><span class="badge text-bg-success">Selesai</span></td>
+              </tr>
+              <tr>
+                <td>Daniel</td><td>Kopi Wamena</td><td>5</td><td>Rp81.000</td>
+                <td><span class="badge text-bg-warning">Diproses</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Bootstrap -->
+  <div class="modal fade modal-kopi" id="modalMenu" tabindex="-1"
+       aria-labelledby="judulModalMenu" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="judulModalMenu">Tambah Menu</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label" for="bsNamaMenu">Nama Menu</label>
+            <input class="form-control" id="bsNamaMenu" placeholder="Contoh: Es Kopi Pandan">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="bsKategori">Kategori</label>
+            <select class="form-select" id="bsKategori">
+              <option>Kopi</option>
+              <option>Non Kopi</option>
+              <option>Makanan</option>
+            </select>
+          </div>
+          <div class="mb-0">
+            <label class="form-label" for="bsHarga">Harga</label>
+            <input type="number" class="form-control" id="bsHarga" placeholder="15000">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button class="btn btn-kopi">Simpan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-kopi">
+    <div class="container text-center small">
+      &copy; 2026 Kopi Nusantara &middot; Dashboard Bootstrap (Modul 10)
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
